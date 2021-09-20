@@ -4,6 +4,15 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+/*
+in build.gradle (module: app) file place :
+
+buildFeatures{
+        viewBinding true
+    }
+
+ */
+
 public class MainActivity extends AppCompatActivity implements LoginFragment.loginListener , AccountFragment.accountListener, UpdateFragment.updateListener,RegisterFragment.RegisterListener {
 
     @Override

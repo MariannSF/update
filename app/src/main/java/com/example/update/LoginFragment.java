@@ -54,6 +54,7 @@ DataServices.AccountRequestTask task ;
         binding.Login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //when view created we get access to the editTexts and buttons
                 email =binding.editTextName.getText().toString();
                 pw = binding.editTextTextPassword.getText().toString();
                 task = DataServices.login(email,pw);
@@ -82,8 +83,12 @@ DataServices.AccountRequestTask task ;
             }
         });
     }
-
+    //needed when fragment is sending data to activity
     //When fragment is attached to Activity
+    /*
+    We make sure the context is the instance of the interface (loginListener)
+    if so then we cast it to an interface type and assign to mListener
+     */
     @Override
     public void onAttach(@NonNull Context context) {
         super.onAttach(context);

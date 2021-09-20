@@ -42,6 +42,7 @@ public class AccountFragment extends Fragment {
     }
 
 
+    //the Binding should have the name from the layout Fragment_account and binding
     FragmentAccountBinding binding;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -70,6 +71,7 @@ public class AccountFragment extends Fragment {
             }
         });
     }
+    //needed when the fragment sends data back to the activity
     @Override
     public void onAttach(@NonNull Context context) {
         super.onAttach(context);
